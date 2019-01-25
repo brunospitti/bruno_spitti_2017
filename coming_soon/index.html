@@ -1,0 +1,381 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="author" content="Bruno Spitti">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>Bruno Spitti | Web Designer</title>
+
+<!-- Favicon -->
+<link rel="shortcut icon" type="image/png" href="images/favicon.png"/>
+<link rel="shortcut icon" type="image/png" href="http://brunospitti.com/images/favicon.png"/>
+<!-- End. Favicon -->
+
+<!-- Styles -->
+<link rel="stylesheet" type="text/css" href="css/animate.min.css">
+<link rel="stylesheet" type="text/css" href="css/fonts.css">
+<link rel="stylesheet" type="text/css" href="css/loading.css">
+<!-- End. Styles -->
+
+<!-- Favicon -->
+<link rel="apple-touch-icon" sizes="180x180" href="../images/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" href="../images/favicon/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="../images/favicon/favicon-16x16.png" sizes="16x16">
+<link rel="manifest" href="../images/favicon/manifest.json">
+<link rel="mask-icon" href="../images/favicon/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="shortcut icon" href="../images/favicon/favicon.ico">
+<meta name="msapplication-config" content="../images/favicon/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
+<!-- End. Favicon -->
+
+<!-- TRANSFER THIS STYLE BELLOW TO THE STYLE FILE AFTERWARDS -->
+<style>
+
+  /* ====== CSS RESET ====== */
+  * {margin:0; padding:0; list-style:none; vertical-align:baseline;}
+  *,
+  *:after,
+  *::before {
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+  }
+  body{
+    overflow-x: hidden;
+    overflow-y: scroll;
+  }
+  /* ====== END. CSS RESET ====== */
+
+
+  /* ====== HOME ====== */
+  section.home{
+    width:100vw;
+    height:100vh;
+  }
+
+  section.home .bg{
+    width:100vw;
+    height:100vh;
+    background: url('../images/homeBackground.jpg') no-repeat;
+    background-size: cover;
+    background-position: center bottom;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+
+  section.home .content{
+    width:100vw;
+    height:100vh;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+
+  li.logo{
+    display:none;
+    background: url('../images/bruno-spitti.png') no-repeat;
+    margin-left: 37%;
+    margin-top: 13%;
+    width: 435px;
+    height: 250px;
+    background-size: contain;
+    z-index: 99;
+  }
+
+  li.logoLine{
+    width: 0;
+    height: 2px;
+    background: #0c1e28;
+    margin-left: 42%;
+    margin-top: 10%; 
+    z-index: 1;
+  }
+
+  li.logoSubTitle{
+    margin-left: 43.5%;
+    margin-top: 12.75%;
+  }
+
+  li.logoSubTitle h1{
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    font-weight: 100;
+    font-size: 47px;
+    opacity: 0.3;
+    font-style: italic;
+    letter-spacing: 4px;
+  }
+
+  .scrollHolder{
+    width: 100%;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    font-weight: 100;
+    position: absolute;
+    bottom: 5%;
+    display: none;
+  }
+
+  .scrollHolder .scroll{}
+
+  .scrollHolder .scroll::before,
+  .scrollHolder .scroll::after{
+    position: absolute;
+    left: 50%;
+    width: 2px;
+    height: 220%;
+    background: #474747;
+    content: '';
+    -webkit-transition: -webkit-transform 0.3s;
+    transition: transform 0.3s;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    outline: 1px solid transparent;
+  }
+
+  .scrollHolder .scroll::before{
+    -webkit-transform: translateX(-50%) rotate(235deg);
+    transform: translateX(-50%) rotate(235deg);
+    -webkit-transform-origin: 50% 0%;
+    transform-origin: 50% 0%;
+  }
+  .scrollHolder .scroll::after{
+    -webkit-transform: translateX(-50%) rotate(122deg);
+    transform: translateX(-50%) rotate(122deg);
+    -webkit-transform-origin: 100% 0%;
+    transform-origin: 100% 0%;
+    left: 49.9%;
+  }
+
+  .scrollHolder .scrollText{
+    margin-top: 7px;
+    opacity: 0.6;
+  }
+
+  .comingsoon{
+    color: white;
+    font-size: 2.5em;
+    text-align: center;
+    position: absolute;
+    bottom: 3vh;
+    width: 100%;
+    font-family: 'bebas_neuelight';
+    letter-spacing: 2px;
+    opacity: 0.4;
+  }
+
+  /* ====== END. HOME ====== */
+
+  /* smartphone */
+  @media screen and (max-device-width: 640px) {
+
+    li.logo{
+      margin: 45% 5%;
+      width: 90%;
+    }
+
+    li.logoLine {
+      margin: 32% 0 0 25%;
+      width: 70%; /*remove afterwards*/
+    }
+
+    li.logoSubTitle{
+      margin: 41% 0 0 26%;
+    }
+
+    li.logoSubTitle h1{
+      font-size: 35px;
+      letter-spacing: 3px;
+    }
+
+  }
+
+  /* smartphone - landscape mode */
+  @media only screen and (max-device-width: 640px)
+                     and (orientation: landscape) {
+    
+    li.logo{
+      margin: 7% 0 0 25%;
+      width: 50%;
+      height: 150px;
+    }
+
+    li.logoLine{
+      margin: 18% 0 0 35%;
+      width: 40%;
+    }
+
+    li.logoSubTitle{
+      margin: 23% 0 0 37%;
+    }
+
+    li.logoSubTitle h1{
+      font-size: 35px;
+    }
+
+    .comingsoon{
+      font-size: 1.25em;
+    }
+
+  }
+
+  /* tablet */
+  @media screen and (min-width: 640px)
+                and (max-width: 1024px) {
+
+    li.logo{
+      margin: 45% 0 0 22%;
+    }
+
+    li.logoLine{
+      margin: 20% 0 0 33%;
+    }
+
+    li.logoSubTitle{
+      margin: 25.5% 0 0 36%;
+    }
+
+    .comingsoon{
+      bottom: 5vh;
+      font-size: 3em;
+    }
+
+  }
+
+  /* tablet - landscape mode */
+  @media screen and (min-width: 640px)
+                and (max-width: 1024px)
+                and (orientation: landscape) {
+
+    li.logo{
+      margin: 20% 0 0 25%;
+      width: 50%;
+    }
+
+    li.logoLine{
+      margin: 18% 0 0 36%; 
+    }
+
+    li.logoSubTitle{
+      margin: 23% 0 0 37%;
+    }
+
+    li.logoSubTitle h1{
+      font-size: 56px;
+    }
+
+  }
+
+  /* full hd */
+  @media (min-width: 1450px) {
+
+  }
+
+</style>
+<!-- END. TRANSFER THIS STYLE BELLOW TO THE STYLE FILE AFTERWARDS -->
+
+</head>
+
+<body>
+
+<div class="loading">
+  <div class="leftBottom"></div>
+  <div class="rightTop"></div>
+  <div class="rightBottom"></div>
+  <div class="cssload-thecube">
+    <div class="cssload-cube cssload-c1"></div>
+    <div class="cssload-cube cssload-c2"></div>
+    <div class="cssload-cube cssload-c4"></div>
+    <div class="cssload-cube cssload-c3"></div>
+  </div>
+</div>
+
+<section class="home">
+  <div class="bg"></div>
+  <div class="content">
+    <ul class="logoParallax" id="scene" data-scalar-x="0.75" data-scalar-y="1.5">
+      <li class="logo layer" data-depth="0.98"></li>
+      <li class="logoLine layer" data-depth="0.98"></li>
+      <li class="logoSubTitle layer" data-depth="0.98">
+        <h1>web designer</h1>
+      </li>
+    </ul>
+    <div class="comingsoon">Coming Soon</div>
+  </div>
+</section>
+
+
+<!-- Scripts -->
+<script src="js/jquery-2.1.4.min.js"></script>
+<script src="js/parallax.min.js"></script>
+<script src="js/rellax.min.js"></script>
+
+<!-- Logo Parallax -->
+<script>
+    var scene = document.getElementById('scene');
+    var parallax = new Parallax(scene);
+</script>
+<!-- End. Logo Parallax -->
+
+
+<script> //transfer to functions.js at the end!
+
+  // Document loadfunction
+    $( window ).load(function() {
+      // fade loading div when loaded is complete
+      $('.loading').addClass('animated fadeOut');
+      window.setTimeout(function (){
+        $('.loading').hide();
+      }, 1000);    
+    });
+  // End. Document loadfunction
+
+
+  // Coming soon dots
+  var dots = 0;
+
+  function type(){
+      if(dots < 3){
+          $('.comingsoon').append('.');
+          dots++;
+      } else {
+          $('.comingsoon').html('Coming Soon');
+          dots = 0;
+      }
+  };
+  // End. Coming soon dots
+
+
+  // Document ready function
+  $(document).ready(function(){
+      // Call dots
+      setInterval (type, 1000);
+  });
+  // End. Document ready function
+
+</script>
+
+
+<!-- Google Analytics -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-91603223-1', 'auto');
+  ga('send', 'pageview');
+</script>
+<!-- End. Google Analytics -->
+
+
+<!-- End. Scripts -->
+</body>
+
+</html>

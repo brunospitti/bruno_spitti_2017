@@ -293,9 +293,11 @@ var windowWidth = $(window).width();
                 'subject'       : $('input[name=subject]').val(), 
                 'msg'         : $('textarea[name=message]').val()
               };
+              console.log('TCL: post_data', post_data)
                 
             //Ajax post data to server
-              $.post('contact_me.php', post_data, function(response){  
+              $.post('/contact_me.php', post_data, function(response){  
+								console.log('TCL: response', response)
                 if(response.type == 'error'){ //load json data from server and output message     
                   output = '<div class="error"><div class="messageText"><span>Hello '+ post_data['user_name'] +'</span>Really sorry about that...<div class="phrase">Could you try to send the message one more time, please? :(</div></div></div>';
                 }else{

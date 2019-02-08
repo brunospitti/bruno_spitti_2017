@@ -2,7 +2,7 @@
 * jquery.inputmask.bundle.js
 * https://github.com/RobinHerbots/jquery.inputmask
 * Copyright (c) 2010 - 2017 Robin Herbots
-* Licensed under the MIT license (http://www.opensource.org/licenses/mit-license.php)
+* Licensed under the MIT license (https://www.opensource.org/licenses/mit-license.php)
 * Version: 3.3.5-213
 */
 !function(factory) {
@@ -2182,7 +2182,7 @@
                     cardinality: 1
                 }
             },
-            mask: "(\\http://)|(\\http\\s://)|(ftp://)|(ftp\\s://)i{+}",
+            mask: "(\\https://)|(\\http\\s://)|(ftp://)|(ftp\\s://)i{+}",
             insertMode: !1,
             autoUnmask: !1,
             inputmode: "url"

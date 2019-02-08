@@ -287,7 +287,7 @@ var windowWidth = $(window).width();
             $('.spinner').show();
 
               post_data = {
-                'user_name'     : $('input[name=name]').val(), 
+                'user_name'     : $('input[name=personName]').val(), 
                 'user_email'    : $('input[name=email]').val(), 
                 'phone_number'    : $('input[name=phone2]').val(), 
                 'subject'       : $('input[name=subject]').val(), 

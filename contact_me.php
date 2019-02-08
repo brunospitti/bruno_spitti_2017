@@ -1,6 +1,16 @@
 <?php
+
+function debug_to_console( $data ) {
+    $output = $data;
+    if ( is_array( $output ) )
+        $output = implode( ',', $output);
+
+    echo "<script>console.log( 'Debug Objects: " . $output . "' );</script>";
+}
+
 if($_POST)
 {
+    debug_to_console( "Test" );
     $to_email       = "me@brunospitti.com"; //Recipient email, Replace with own email here
     $from_email     = 'me@brunospitti.com'; //from mail, it is mandatory with some hosts and without it mail might endup in spam.
     

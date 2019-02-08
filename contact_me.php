@@ -2,7 +2,7 @@
 if($_POST)
 {
     $to_email       = "me@brunospitti.com"; //Recipient email, Replace with own email here
-    $from_email     = 'contact_form@brunospitti.com'; //from mail, it is mandatory with some hosts and without it mail might endup in spam.
+    $from_email     = 'me@brunospitti.com'; //from mail, it is mandatory with some hosts and without it mail might endup in spam.
     
     //check if its an ajax request, exit if not
     if(!isset($_SERVER['HTTP_X_REQUESTED_WITH']) AND strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) != 'xmlhttprequest') {
